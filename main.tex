@@ -1,0 +1,219 @@
+\documentclass[theorems,spanish,code]{HomeWork}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\usepackage{kantlipsum}
+\setlength{\parindent}{0pt}
+
+\definecolor{celestoso}{HTML}{6D90F5}
+\definecolor{sky}{HTML}{1E3984}
+\definecolor{silvblue}{HTML}{6F6F6F}
+\definecolor{grisito}{HTML}{D6D6D6}
+\definecolor{bblue}{HTML}{A7B3D8}
+
+%\titlesty{classic}
+
+\institute{Escuela de Ciencias Físicas y Matemáticas}
+\title{Tarea \#1}
+\author{Alonso Quijano el Bueno}
+\id{202102022}
+\email{nombredeusuario@gmail.com}
+\course{Análisis de Algoritmos}
+\professor{Miguel de Cervantes}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\part{Partes}
+\section{Secciones}
+\subsection{Subsecciones}
+\subsubsection{Subsubsecciones}
+\paragraph{\kant[1]}
+
+\section{Texto}
+\kant[2-3]
+
+\section{Listas}
+\begin{minipage}{0.5\textwidth}
+\subsection{Numeradas}
+\begin{enumerate}
+    \item primer elemento
+    \staritem segundo elemento
+    \item tercer elemento
+    \begin{enumerate}
+        \staritem primer nest
+        \begin{enumerate}
+            \item segundo nest
+            \begin{enumerate}
+                \staritem tercer nest
+            \end{enumerate}
+        \end{enumerate}
+    \end{enumerate}
+    \item cuarto elemento
+\end{enumerate}
+
+\subsection{No numeradas}
+\begin{itemize}
+    \item primer elemento
+    \item segundo elemento
+    \item tercer elemento
+    \begin{itemize}
+        \item primer nest
+        \begin{itemize}
+            \item segundo nest
+            \begin{itemize}
+                \item tercer nest
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \item cuarto elemento
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\subsection{Descriptiva}
+\begin{description}
+    \item[primer] elemento
+    \item[segundo] elemento
+    \item[tercer] elemento
+    \begin{description}
+        \item[primer] nest
+        \begin{description}
+            \item[segundo] nest
+            \begin{description}
+                \item[tercer] nest
+            \end{description}
+        \end{description}
+    \end{description}
+    \item[cuarto] elemento
+\end{description}
+\end{minipage}
+
+\section{Matemática}
+\kant[4]
+\begin{theorem}[Subtítulo]
+For any summation method $L$, its Abelian theorem is the result that if $c=(c_n)$ is a convergent sequence, with limit $C$, then $L(c)=C$. An example is given by the Cesàro method, in which $L$ is defined as the limit of the arithmetic means of the first $N$ terms of $c$, as $N$ tends to infinity. One can prove that if $c$ does converge to $C$, then so does the sequence $(d_N)$ where
+\end{theorem}
+\kant[5]
+\begin{theorem*}[Teorema personalizado]
+For any summation method $L$, its Abelian theorem is the result that if $c=(c_n)$ is a convergent sequence, with limit $C$, then $L(c)=C$. An example is given by the Cesàro method, in which $L$ is defined as the limit of the arithmetic means of the first $N$ terms of $c$, as $N$ tends to infinity. One can prove that if $c$ does converge to $C$, then so does the sequence $(d_N)$ where
+\end{theorem*}
+\kant[6]
+\begin{proof}
+\kant[7]
+\end{proof}
+
+\newpage
+
+\section{Boxed and color boxed}
+\begin{minipage}{0.5\textwidth}
+\subsection{Boxed}
+\[\boxed{ \frac{-b\pm\sqrt{b^2-4ac}}{2a} }\]
+\subsection{ABoxed}
+\begin{equation*}
+\begin{split}
+    x^2 - 4 &= 0\\
+    x &= 2
+\end{split}
+\end{equation*}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\subsection{CBoxed}
+\[\Cboxed{ \frac{-b\pm\sqrt{b^2-4ac}}{2a} }\]
+\subsection{CABoxed}
+\begin{equation*}
+\begin{split}
+    x^2 - 4 &= 0\\
+    \CAboxed{x &= 2}
+\end{split}
+\end{equation*}
+\end{minipage}
+
+\kant[8]
+\begin{nameEq}{Texto de label}
+\frac{1}{a}x^2+bx+c=0
+\end{nameEq}
+\kant[9]
+\labline{Separator}
+\kant*[10]
+\[ \text{Total derivative: }\td[3]{f}{x} \qquad \text{Differential: }\dif x \qquad \text{Total derivative: }\td*[3]{f}{x} \]
+
+\[ \text{Partial derivative: }\pd[3]{f}{x,y,z} \qquad \text{Differential: }\pdif x \qquad \text{Partial derivative: }\pd*[3]{f}{x,y,z} \]
+\kant*[11]
+\begin{ans}
+\kant*[12]
+\end{ans}
+\kant*[13]
+\begin{prob}
+\kant*[14]
+\end{prob}
+\kant*[15-16]
+\begin{info}
+\kant*[17]
+\end{info}
+\kant*[18]
+\begin{warn}
+\kant*[19]
+\end{warn}
+\kant*[20-22]
+\begin{file}[04Fortran.f90]{fortran}
+! File done following () tutorial.
+program fortrantut
+    implicit none
+    real :: float_num = 1.111111111111111
+    real :: float_num2 = 1.111111111111111
+    double precision :: dbl_num = 1.111111111111111d+0
+    double precision :: dbl_num2 = 1.111111111111111d+0
+    real :: rand(1)
+    integer :: low = 1, high = 10
+
+
+    print "(a26)", "Making a lot of operations"
+    print "(a8,i1)", "5 + 4 = ", (5+4)
+    print "(a8,i1)", "5 - 4 = ", (5-4)
+    print "(a8,i2)", "5 * 4 = ", (5*4)
+    print "(a8,i1)", "5 / 4 = ", (5/4)
+    print "(a8,i1)", "5 % 4 = ", mod(5,4)
+    print "(a8,i3)", "5 ^ 4 = ", (5**4)
+
+    print "(a33)", "Demonstrating how presition works"
+    print "(f17.15)", float_num + float_num2
+    print "(f17.15)", dbl_num + dbl_num2
+
+    call random_number(rand)
+    print "(i2)", low + floor((high+1-low)*rand)
+
+end program fortrantut
+\end{file}
+con la salida.
+\begin{commandline}[escapeinside=||]
+$ cat 04Fortran.f90
+$ ./a.out
+Making a lot of operations
+5 + 4 = 9
+5 - 4 = 1
+5 * 4 = 20
+5 / 4 = 1
+5 % 4 = 1
+5 ^ 4 = 625
+Demonstrating how presition works
+2.222222328186035
+2.222222222222222
+ 9
+\end{commandline}
+\kant*[23]
+
+\newpage
+
+{\color{green!50!black}\vrule width 3pt}
+\vbox{%
+\begin{adjustwidth}{2pt}{7pt}
+    \kant*[14]\\
+    
+    – Amado C.
+\end{adjustwidth}}
+
+\end{document}
