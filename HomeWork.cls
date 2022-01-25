@@ -1,9 +1,23 @@
-% Creditos
+% Copyright (c) 1998-2022 by Amado Cabrera 
+%                            and 
+%                            Mariana Pérez
+%
+% License missing
+%
+% Repository: https://github.com/AmadoCab/HomeWorkclass
+%
+% Notes
+% ~~~~~
+% The following tags are used:
+% HW@   :   the generic tag used through the class
+% HWl@  :   the tag used to define labels and its translations
+%
+
 \ProvidesClass{HomeWork}[2022/01/15 V2.0 by Amado Cabrera and Mariana Pérez]
 \NeedsTeXFormat{LaTeX2e}
 
-% To give the info needed to use the class to the user.
-\typeout{-- información.} % <-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-
+\typeout{-- See "HomeWork.pdf" manual for usage information.}
+\typeout{-- ctan/url.}
 
 % HomeWork.cls version numbers, provided as of V1.3
 % These values serve as a way a .tex file can
@@ -128,22 +142,22 @@
         \vskip 2em%
         \begin{center}%
         \HW@isUndef{\HW@institute}%
-            {\scshape\HWl@institute\HW@institute\par\vskip 5pt}%
+            {\scshape\HWl@institute\HW@institute\par\vskip 5\p@}%
         \hrule%
-        \vskip 10pt%
+        \vskip 10\p@%
         {\huge\bfseries\@title\par}%
-        \vskip 6pt%
+        \vskip 6\p@%
         \HWl@author{\itshape\@author}\par%
-        \vskip 1pt%
+        \vskip 1\p@%
         \HW@isUndef{\HW@id}{\HWl@id\HW@id}%
-        \vskip 10pt%
+        \vskip 10\p@%
         \hrule%
-        \vskip 5pt%
+        \vskip 5\p@%
         \HW@isUndef{\HW@course}{\HWl@course}{\itshape\HW@course}%
         \HW@isUndef{\HW@professor}%
             {\HW@isUndef{\HW@course}{\space--\space}%
             {\HWl@professor{\itshape\HW@professor}}}\par%
-        \vskip 5pt%
+        \vskip 5\p@%
         {\@date}%
         \end{center}\par%
         \vskip 1.5em%
@@ -151,7 +165,6 @@
         \twocolumn[\HW@Tstylish]
     \fi
 }
-
 % Geometric Maketitle
 \newcommand{\HW@Tgeometric}{%
     \ifnum\col@number=\@ne
@@ -161,8 +174,8 @@
         \vskip 2em%
         \begin{center}%
         \HW@isUndef{\HW@institute}%
-            {\scshape\HWl@institute\HW@institute\par\vskip 10pt}%
-        \setlength{\tabcolsep}{3pt}%
+            {\scshape\HWl@institute\HW@institute\par\vskip 10\p@}%
+        \setlength{\tabcolsep}{3\p@}%
         \begin{tabular}{l}
             \@author \\
             \HW@isUndef{\HW@id}{\HW@id}
@@ -170,21 +183,21 @@
         \begin{tabular}{r}
             \@date \\
             \HW@isUndef{\HW@email}{\HW@email}
-        \end{tabular}\par\vskip 10pt%
+        \end{tabular}\par\vskip 10\p@%
         \fbox{%
         \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule} 
         \centering\huge%
-        \vspace*{15pt}%
+        \vspace*{15\p@}%
         \@title
-        \vspace*{10pt}%
+        \vspace*{10\p@}%
         \end{minipage}%
         }\par\vskip-0.8em%
-        {\hspace*{15pt}%
+        {\hspace*{15\p@}%
         \HW@isUndef{\HW@course}{\colorbox{white}{\HW@course}}%
         \HW@isUndef{\HW@professor}{
         \HW@isUndef{\HW@course}{\hfill}%
         \colorbox{white}{\HW@professor}}%
-        \hspace*{15pt}}
+        \hspace*{15\p@}}
         \end{center}\par%
     \else
         \twocolumn[\HW@Tgeometric]
@@ -220,24 +233,24 @@
     {}
     {}
     {\slshape}
-    {0pt}
+    {\z@}
     {\bfseries}
     {}
-    {0pt}
-    {\thmname{#1}\thmnumber{~#2}:\thmnote{ \mdseries#3.}\\[2pt]}
+    {\z@}
+    {\thmname{#1}\thmnumber{~#2}:\thmnote{ \mdseries#3.}\\[2\p@]}
 \newtheoremstyle{HWbreak*}
     {}
     {}
     {\slshape}
-    {0pt}
+    {\z@}
     {\bfseries}
     {}
-    {0pt}
+    {\z@}
     {\ifx\HW@undefined#3\HW@undefined%
         {\thmname{#1}}%
     \else%
         {\thmname{#3}}%
-    \fi:\\[2pt]}
+    \fi:\\[2\p@]}
 \renewcommand{\qedsymbol}{$\mathcal{Q.E.D.}$}
 
 % Theorems loaded by the theorems option
@@ -395,10 +408,10 @@
     breakable,
     enhanced,
     frame hidden,
-    fonttitle={\large\hspace{-7pt}},
-    left=7pt,
-    right=7pt,
-    bottomtitle=3pt,
+    fonttitle={\large\hspace{-7\p@}},
+    left=7\p@,
+    right=7\p@,
+    bottomtitle=3\p@,
     sharp corners,
     colback={sky!6},
     coltitle={sky},
@@ -408,10 +421,10 @@
     breakable,
     enhanced,
     frame hidden,
-    fonttitle={\large\hspace{-7pt}},
-    left=7pt,
-    right=7pt,
-    bottomtitle=3pt,
+    fonttitle={\large\hspace{-7\p@}},
+    left=7\p@,
+    right=7\p@,
+    bottomtitle=3\p@,
     sharp corners,
     colback={sky!6},
     coltitle={sky},#1
@@ -422,8 +435,8 @@
     enhanced,
     coltitle=black,
     colback=white,
-    top=-2pt,
-    bottom=0pt,
+    top=-2\p@,
+    bottom=\z@,
     fonttitle={\bfseries},
     detach title,
     frame hidden,
@@ -432,11 +445,11 @@
     title={Information},
     before upper={\tcbtitle\textbf{:}\space},
     overlay unbroken and first={
-        \draw[line width=1.2pt] (frame.north west) -- (frame.south west);
-        \draw[line width=1.2pt,white,fill=black] (frame.north west) circle[radius=1.3ex] node[white,scale=0.85]{\textbf{i}};
+        \draw[line width=1.2\p@] (frame.north west) -- (frame.south west);
+        \draw[line width=1.2\p@,white,fill=black] (frame.north west) circle[radius=1.3ex] node[white,scale=0.85]{\textbf{i}};
     },
     overlay middle and last={
-        \draw[line width=1.2pt] (frame.north west) -- (frame.south west);
+        \draw[line width=1.2\p@] (frame.north west) -- (frame.south west);
     },
     #1
 }
@@ -446,8 +459,8 @@
     enhanced,
     coltitle=black,
     colback=white,
-    top=-2pt,
-    bottom=0pt,
+    top=-2\p@,
+    bottom=\z@,
     fonttitle={\bfseries},
     detach title,
     frame hidden,
@@ -456,12 +469,12 @@
     title={Warning},
     before upper={\tcbtitle\textbf{:}\space},
     overlay unbroken and first={
-        \draw[line width=1.2pt] (frame.north west) -- (frame.south west);
-        \draw[line width=1.2pt,white,fill=black,rotate=45] ([yshift=-1.1ex,xshift=-1.1ex]frame.north west) rectangle ([yshift=1.1ex,xshift=1.1ex]frame.north west);
+        \draw[line width=1.2\p@] (frame.north west) -- (frame.south west);
+        \draw[line width=1.2\p@,white,fill=black,rotate=45] ([yshift=-1.1ex,xshift=-1.1ex]frame.north west) rectangle ([yshift=1.1ex,xshift=1.1ex]frame.north west);
         \node at (frame.north west)[white,scale=0.85]{\textbf{!}};
     },
     overlay middle and last={
-        \draw[line width=1.2pt] (frame.north west) -- (frame.south west);
+        \draw[line width=1.2\p@] (frame.north west) -- (frame.south west);
     },
     #1
 }
@@ -482,16 +495,16 @@
 \ifHW@code
 % Command line box
 \tcbset{HWcommandline/.style={
-    arc=0pt,
+    arc=\z@,
     colback=black!5!white,
     colframe=black!50!white,
-    fonttitle={\normalfont\sffamily\hspace{5pt}},
+    fonttitle={\normalfont\sffamily\hspace{5\p@}},
     title={Command Line},
-    left skip=10pt,
-    right skip=10pt,
-    toptitle=2pt,
-    bottomtitle=2pt,
-    left=5pt,
+    left skip=10\p@,
+    right skip=10\p@,
+    toptitle=2\p@,
+    bottomtitle=2\p@,
+    left=5\p@,
     breakable
     }
 }
@@ -528,32 +541,32 @@
     \draw[green!70!black,fill=green!80!black] (3ex,0) circle[radius=0.5ex];}%
 }
 \tcbset{HWfile/.style={
-    fonttitle={\ttfamily\color{black}\hspace{-3pt}\window\hspace{8pt}},
-    bottomtitle=0pt,
+    fonttitle={\ttfamily\color{black}\hspace{-3\p@}\window\hspace{8\p@}},
+    bottomtitle=\z@,
     breakable,
     enhanced,
     sharp corners,
-    boxrule=0.6pt,
-    bottomrule=-1pt,
-    rightrule=-1pt,
+    boxrule=0.6\p@,
+    bottomrule=-1\p@,
+    rightrule=-1\p@,
     colframe=black,
     colback=white,
     colbacktitle=black!10!white,
-    left=10pt,
-    right=10pt,
+    left=10\p@,
+    right=10\p@,
     rounded corners=northwest,
     top=0.35cm,
     bottom=0.35cm,
-    left skip=10pt,
-    right skip=10pt,
+    left skip=10\p@,
+    right skip=10\p@,
     overlay first and middle={
-        \draw[line width=0.6pt] (frame.north east) -- (frame.south east);
+        \draw[line width=0.6\p@] (frame.north east) -- (frame.south east);
     },
     overlay unbroken and last={
-        \draw[line width=0.6pt] (frame.south east) ++(0,1cm) -- ++(-1cm,0) -- ++(0,-1cm);
-        \draw[line width=0.6pt] (frame.south east) ++(0,1cm) -- ++(-1cm,-1cm);
-        \draw[line width=0.6pt] (frame.south east) ++(0,1cm) -- (frame.north east);
-        \draw[line width=0.6pt] (frame.south east) ++(-1cm,0) -- (frame.south west);
+        \draw[line width=0.6\p@] (frame.south east) ++(0,1cm) -- ++(-1cm,0) -- ++(0,-1cm);
+        \draw[line width=0.6\p@] (frame.south east) ++(0,1cm) -- ++(-1cm,-1cm);
+        \draw[line width=0.6\p@] (frame.south east) ++(0,1cm) -- (frame.north east);
+        \draw[line width=0.6\p@] (frame.south east) ++(-1cm,0) -- (frame.south west);
     },
     }
 }
@@ -565,7 +578,7 @@
     minted language={#2},
     minted options={
         linenos,
-        numbersep=4pt,
+        numbersep=4\p@,
         breaklines,
         breakanywhere,
     },
@@ -577,7 +590,7 @@
     minted language={#2},
     minted options={
         linenos,
-        numbersep=4pt,
+        numbersep=4\p@,
         breaklines,
         breakanywhere,
     },
@@ -592,13 +605,15 @@
     listing file={#3},
     minted options={
         linenos,
-        numbersep=4pt,
+        numbersep=4\p@,
         breaklines,
         breakanywhere,
         #1
     },
 }
 \fi
+
+\endinput
 
 %% TO DO LIST %%
 % Ponerle color a las cajas de color matemáticas
