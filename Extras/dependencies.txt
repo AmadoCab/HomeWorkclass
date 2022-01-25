@@ -1,0 +1,87 @@
+LIST OF ALL THE FILES
+
+== Base ==
+- Base LaTeX
+    - l3backend-pdftex.def
+- Article
+    - article.cls
+    - size10.clo
+- Inputenc (utf8)   <-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-
+    - inputenc.sty
+- Fontenc (T1)
+    - fontenc.sty
+- Amsmath
+    - amsmath.sty
+    - amstext.sty
+    - amsgen.sty
+    - amsbsy.sty
+    - amsopn.sty
+- Amssymb
+    - amssymb.sty
+    - amsfonts.sty
+    - umsa.fd
+    - umsb.fd
+- Amsthm
+    - amsthm.sty
+- Enumitem
+    - enumitem.sty
+- Multicol
+    - multicol.sty
+- Fancyhdr      <-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-
+    - fancyhdr.sty
+- Dsfont
+    - dsfont.sty
+- Iftex
+    - iftex.sty
+- Float
+    - float.sty
+- Mathrsfs
+    - mathrsfs.sty
+    - ursfs.fd
+- Graphicx
+    - graphicx.sty
+    - keyval.sty
+    - graphics.sty
+    - trig.sty
+    - graphics.cfg
+    - pdftex.def
+    - supp-pdf.mkii
+    - epstopdf-base.sty
+    - epstopdf-sys.cfg
+- Xcolor
+    - xcolor.sty
+    - color.cfg
+    - pdftex.def
+    - supp-pdf.mkii
+- Mdframed
+    - mdframed.sty
+    - kvoptions.sty
+    - keyval.sty
+    - ltxcmds.sty
+    - kvsetkeys.sty
+    - xparse.sty
+    - expl3.sty
+    - etoolbox.sty
+    - zref-abspage.sty
+    - zref-base.sty
+    - infwarerr.sty
+    - kvdefinekeys.sty
+    - pdftexcmds.sty
+    - iftex.sty
+    - etexcmds.sty
+    - auxhook.sty
+    - atbegshi-ltx.sty
+    - needspace.sty
+    - color.sty
+    - color.cfg
+    - pdftex.def
+    - md-frame-0.mdf
+    - supp-pdf.mkii
+- Kvoptions
+    - kvoptions.sty
+    - keyval.sty
+    - ltxcmds.sty
+    - kvsetkeys.sty
+
+== Extra ==
+
