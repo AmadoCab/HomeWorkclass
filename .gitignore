@@ -480,9 +480,3 @@ tags
 
 # End of https://www.toptal.com/developers/gitignore/api/latex,tex,vim
 
-### Extras ###
-Extras/
-colores.tex
-latexmkrc
-main.tex
-Marianita.cls
